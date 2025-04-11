@@ -8,11 +8,12 @@ import View from './Components/View';
 function App() {
   return (
     <>
-    <Router>
+    <Router basename="/User-Registration">
       <Navbar />
       <Routes>
         <Route path ='/' element={<Home/>}/>
         <Route path='/view' element={<View/>}/>
+         {/* <Route path="*" element={<Navigate to="/" replace/>} /> */}
       </Routes>
     </Router>
     </>
