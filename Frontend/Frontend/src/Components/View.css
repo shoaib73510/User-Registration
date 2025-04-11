@@ -1,0 +1,47 @@
+/* Container Styling */
+.responsive-container {
+    padding: 20px;
+    margin: auto;
+    max-width: 1200px; /* Constrain the width */
+    background-color: #e9ecef;
+    overflow: hidden; /* Prevent content from going out of bounds */
+    box-sizing: border-box; /* Include padding and border in the element's dimensions */
+    margin-top: 50px;
+  }
+  
+  /* Card Styling */
+  .card {
+    width: 100%; /* Ensure cards fit within the container */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Row Styling */
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Add spacing between items */
+  }
+  
+  /* Prevent Overflow for Large Screens */
+  @media (min-width: 1200px) {
+    .row {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      display: grid;
+      gap: 20px;
+    }
+  
+    .responsive-container {
+      overflow: auto; /* Enable scrolling if content exceeds container bounds */
+    }
+  }
+  
+  /* Prevent Card Overflow */
+  .card-body {
+    white-space: normal; /* Prevent long text from spilling out */
+    word-wrap: break-word; /* Force wrapping for overly long content */
+  }
+  
